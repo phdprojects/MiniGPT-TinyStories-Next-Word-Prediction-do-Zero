@@ -1,0 +1,13 @@
+# Dependências — o projeto foi desenhado para correr em Databricks CPU serverless,
+# onde PyTorch CPU, MLflow e o runtime Spark já vêm pré-instalados.
+# Em Databricks: apenas o STEP 0 instala o PyTorch CPU explicitamente:
+#   %pip install torch --index-url https://download.pytorch.org/whl/cpu
+#
+# Para experimentar fora do Databricks (Jupyter local):
+torch>=2.0
+pandas>=2.0
+numpy>=1.26
+matplotlib>=3.8
+# pyspark e mlflow são opcionais fora do Databricks (usados na ingestão Delta e tracking)
+# pyspark>=3.5
+# mlflow>=2.0
